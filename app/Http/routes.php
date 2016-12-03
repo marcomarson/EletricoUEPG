@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  $lampada = \App\Lampada::all();
+return view('controle.redeletrica-1') ->with('lampada', $lampada);
 });
+Route::resource('home', 'ControleLampadaController');
