@@ -34,23 +34,24 @@ table p{
         </thead>
         <tbody>
           <tr>
-            <td>Primeira lâmpada</td>
+            <td>Primeira Luminária</td>
             @for ($i = 1; $i < 24; $i++)
             <td><select  id={{ "lamp".$i."_1"}} name={{ "lamp".$i."_1"}}>
-              @foreach ($lampada->all() as $lamp)
-              <option value="{{$lamp->lampada_id}}"> {{$lamp->lampada_letra }} </option>
+              <option> </option>
+              @foreach ($luminaria->all() as $lamp)
+              <option value="{{$lamp->luminaria_id}}"> {{$lamp->luminaria_letra }} </option>
               @endforeach
             </select>
           </td>
           @endfor
         </tr>
         <tr>
-          <td>Segunda lâmpada</td>
+          <td>Segunda Luminária</td>
           @for ($i = 1; $i < 24; $i++)
           <td><select id={{ "lamp".$i."_2"}} name={{ "lamp".($i)."_2"}}>
             <option> </option>
-            @foreach ($lampada->all() as $lamp)
-            <option value="{{$lamp->lampada_id}}"> {{$lamp->lampada_letra }} </option>
+            @foreach ($luminaria->all() as $lamp)
+              <option value="{{$lamp->luminaria_id}}"> {{$lamp->luminaria_letra }} </option>
             @endforeach
           </select></td>
           @endfor
@@ -71,23 +72,24 @@ table p{
       </thead>
       <tbody>
         <tr>
-          <td>Primeira lâmpada</td>
+          <td>Primeira Luminária</td>
           @for ($i = 1; $i < 24; $i++)
           <td><select  id={{ "lamp".($i+23)."_1"}} name={{ "lamp".($i+23)."_1"}}>
-            @foreach ($lampada->all() as $lamp)
-            <option value="{{$lamp->lampada_id}}"> {{$lamp->lampada_letra }} </option>
+            <option> </option>
+            @foreach ($luminaria->all() as $lamp)
+            <option value="{{$lamp->luminaria_id}}"> {{$lamp->luminaria_letra }} </option>
             @endforeach
           </select>
         </td>
         @endfor
       </tr>
       <tr>
-        <td>Segunda lâmpada</td>
+        <td>Segunda Luminária</td>
         @for ($i = 1; $i < 24; $i++)
         <td><select id={{ "lamp".($i+23)."_2"}} name={{ "lamp".($i+23)."_2"}}>
           <option> </option>
-          @foreach ($lampada->all() as $lamp)
-          <option value="{{$lamp->lampada_id}}"> {{$lamp->lampada_letra }} </option>
+          @foreach ($luminaria->all() as $lamp)
+            <option value="{{$lamp->luminaria_id}}"> {{$lamp->luminaria_letra }} </option>
           @endforeach
         </select></td>
         @endfor

@@ -8,15 +8,15 @@ class Petala extends Model
 {
   public $timestamps = false;
   protected $table = 'petala';
-  protected $primaryKey = 'petala_id';
+  protected $primaryKey = 'poste_id';
+  public $incrementing = false;
  /**
   * The attributes that are mass assignable.
   *
   * @var array
   */
  protected $fillable = [
-     'lampada1', 'lampada2', 'lampada3', 'lampada4', 'petala_nome', 'petala_numero',
-     'lampada_id', 'data_id', 'Parent_petala_id'
+    'poste_id', 'petala_ativa', 'petala_numero', 'petala_nome'
  ];
 
  /**
@@ -24,10 +24,10 @@ class Petala extends Model
   *
   * @var array
   */
- public function data() {
-     return $this->belongsTo('\App\Data', 'data_id', 'data_id');
- }
- public function petala() {
-     return $this->belongsTo('\App\Lampada', 'lampada_id', 'lampada_id');
- }
+  public function poste() {
+      return $this->belongsTo('\App\Poste', 'poste_id', 'poste_id');
+  }
+  public function data() {
+      return $this->belongsTo('\App\Data', 'data_id', 'data_id');
+  }
 }

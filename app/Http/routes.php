@@ -11,8 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-  $lampada = \App\Lampada::all();
-return view('controle.redeletrica-1') ->with('lampada', $lampada);
+// Route::get('/', function () {
+//   $luminaria = \App\Luminaria::all();
+// return view('controle.rede1') ->with('luminaria', $luminaria);
+// });
+
+
+Route::get('estudo', function () {
+return view('estudo');
 });
-Route::resource('home', 'ControleLampadaController');
+
+
+Route::resource('/', 'MainController');
+Route::resource('atualiza', 'MainController');
+Route::resource('home', 'ControleluminariaController');
+Route::resource('petala', 'PetalaController');
+Route::resource('poste', 'PosteController');
+Route::resource('luminaria', 'LuminariaController');
+Route::resource('relatorios', 'RelatoriosController');

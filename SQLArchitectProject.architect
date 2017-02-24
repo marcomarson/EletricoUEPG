@@ -4,8 +4,8 @@
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
   <data-source id="DS0">
-   <property key="Logical" value="(Target Database)" />
    <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="(Target Database)" />
    <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/poste" />
    <property key="UID" value="postgres" />
    <property key="PWD" value="admin" />
@@ -19,16 +19,25 @@
  <source-databases>
  </source-databases>
  <target-database id="ppdb" dbcs-ref="DS0">
-  <table id="TAB1" populated="true" UUID="3f29bad8-636b-4536-b4aa-618ea9bf11eb" name="Lampada" objectType="TABLE" physicalName="Lampada" >
+  <table id="TAB1" populated="true" UUID="3f29bad8-636b-4536-b4aa-618ea9bf11eb" name="Luminaria" objectType="TABLE" physicalName="Luminaria" >
    <remarks></remarks>
    <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL2" populated="true" UUID="fc429a4b-34fd-41a7-87e4-0c5457e233bc" autoIncrement="true" autoIncrementSequenceName="Lampada_lampada_id_seq" defaultValue="" name="lampada_id" nullable="0" physicalName="lampada_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL2" populated="true" UUID="fc429a4b-34fd-41a7-87e4-0c5457e233bc" autoIncrement="true" autoIncrementSequenceName="Luminaria_luminaria_id_seq" defaultValue="" name="luminaria_id" nullable="0" physicalName="luminaria_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL3" populated="true" UUID="28009802-2624-43d2-81a3-24d46228023c" autoIncrement="false" autoIncrementSequenceName="Lampada_modelo_seq" defaultValue="" name="modelo" nullable="0" physicalName="modelo" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL3" populated="true" UUID="28009802-2624-43d2-81a3-24d46228023c" autoIncrement="false" autoIncrementSequenceName="Luminaria_modelo_seq" defaultValue="" name="modelo" nullable="0" physicalName="modelo" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL4" populated="true" UUID="9a653d04-2880-4005-9e8d-9964e86e1931" autoIncrement="false" autoIncrementSequenceName="Lampada_descricao_seq" defaultValue="" name="descricao" nullable="0" physicalName="descricao" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL4" populated="true" UUID="9a653d04-2880-4005-9e8d-9964e86e1931" autoIncrement="false" autoIncrementSequenceName="Luminaria_descricao_seq" defaultValue="" name="descricao" nullable="0" physicalName="descricao" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="5101e321-409f-438f-a01d-641241e59216" autoIncrement="false" autoIncrementSequenceName="Luminaria_potencia_seq" defaultValue="" name="potencia" nullable="0" physicalName="potencia" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+     <remarks></remarks>
+    </column>
+    <column id="COL6" populated="true" UUID="83ddfe6e-df8f-4e53-9e30-9840e31adf3e" autoIncrement="false" autoIncrementSequenceName="Luminaria_luminaria_letra_seq" defaultValue="" name="luminaria_letra" nullable="0" physicalName="luminaria_letra" precision="5" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL7" populated="true" UUID="7f044041-8d3b-47cd-926b-c83a8265feea" autoIncrement="false" autoIncrementSequenceName="Luminaria_luminaria_ativa_seq" defaultValue="true" name="luminaria_ativa" nullable="0" physicalName="luminaria_ativa" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
      <remarks></remarks>
     </column>
     </folder>
@@ -37,207 +46,207 @@
     <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX5" populated="true" UUID="4e32b1ea-22e0-4b70-af20-b9451cf9a63a" clustered="false" name="Lampada_pk" physicalName="lampada_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC6" populated="true" UUID="33c5b3e8-8f62-454c-8897-35357473ecfe" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="lampada_id" physicalName="lampada_id" />
+    <index id="IDX8" populated="true" UUID="4e32b1ea-22e0-4b70-af20-b9451cf9a63a" clustered="false" name="Luminaria_pk" physicalName="luminaria_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC9" populated="true" UUID="33c5b3e8-8f62-454c-8897-35357473ecfe" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="luminaria_id" physicalName="luminaria_id" />
     </index>
    </folder>
   </table>
-  <table id="TAB7" populated="true" UUID="dea00a5f-b34f-4904-aa0e-20eb6986a4df" name="ControleLampada" objectType="TABLE" physicalName="ControleLampada" >
+  <table id="TAB10" populated="true" UUID="dea00a5f-b34f-4904-aa0e-20eb6986a4df" name="ControleLampada" objectType="TABLE" physicalName="ControleLampada" >
    <remarks></remarks>
-   <folder id="FOLTAB71" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL8" populated="true" UUID="e42f0aa8-9b0a-4adc-8615-be56955fb844" autoIncrement="true" autoIncrementSequenceName="ControleLampada_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+   <folder id="FOLTAB101" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL11" populated="true" UUID="e42f0aa8-9b0a-4adc-8615-be56955fb844" autoIncrement="true" autoIncrementSequenceName="ControleLampada_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL9" populated="true" UUID="eb0ef7be-1dc2-4434-a081-0e0941855830" autoIncrement="false" autoIncrementSequenceName="ControleLampada_petala_id_seq" defaultValue="" name="petala_id" nullable="1" physicalName="petala_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL12" populated="true" UUID="eb0ef7be-1dc2-4434-a081-0e0941855830" autoIncrement="false" autoIncrementSequenceName="ControleLampada_petala_id_seq" defaultValue="" name="petala_id" nullable="1" physicalName="petala_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL10" populated="true" UUID="ee57c62e-88c1-4b9c-8985-45d81e407d35" autoIncrement="false" autoIncrementSequenceName="ControleLampada_poste_id_seq" defaultValue="" name="poste_id" nullable="1" physicalName="poste_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL13" populated="true" UUID="ee57c62e-88c1-4b9c-8985-45d81e407d35" autoIncrement="false" autoIncrementSequenceName="ControleLampada_poste_id_seq" defaultValue="" name="poste_id" nullable="1" physicalName="poste_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
-    <folder id="FOLTAB73" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB103" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB72" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB102" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB74" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX11" populated="true" UUID="f2047b9b-b9dd-4e2b-86b7-f42a74e87fbe" clustered="false" name="ControleLampada_pk" physicalName="controlelampada_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC12" populated="true" UUID="57314210-03ce-4270-b164-db9712737b0f" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="id" physicalName="id" />
+    <folder id="FOLTAB104" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX14" populated="true" UUID="f2047b9b-b9dd-4e2b-86b7-f42a74e87fbe" clustered="false" name="ControleLampada_pk" physicalName="controlelampada_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC15" populated="true" UUID="57314210-03ce-4270-b164-db9712737b0f" ascendingOrDescending="UNSPECIFIED" column-ref="COL11" name="id" physicalName="id" />
     </index>
    </folder>
   </table>
-  <table id="TAB13" populated="true" UUID="7e408cda-38f2-4167-b7be-d02bb0d8d092" name="Poste" objectType="TABLE" physicalName="Poste" >
+  <table id="TAB16" populated="true" UUID="7e408cda-38f2-4167-b7be-d02bb0d8d092" name="Poste" objectType="TABLE" physicalName="Poste" >
    <remarks></remarks>
-   <folder id="FOLTAB131" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL14" populated="true" UUID="ec0dfe4d-012d-45d1-97f3-1c5ce70a608d" autoIncrement="true" autoIncrementSequenceName="Poste_poste_id_seq" defaultValue="" name="poste_id" nullable="0" physicalName="poste_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+   <folder id="FOLTAB161" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL17" populated="true" UUID="ec0dfe4d-012d-45d1-97f3-1c5ce70a608d" autoIncrement="true" autoIncrementSequenceName="Poste_poste_id_seq" defaultValue="" name="poste_id" nullable="0" physicalName="poste_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL15" populated="true" UUID="3d939858-ab6d-4e8f-962b-8682f6835bed" autoIncrement="false" autoIncrementSequenceName="ControleLampada_lampada1_seq" defaultValue="" name="lampada1" nullable="1" physicalName="lampada1" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL18" populated="true" UUID="3d939858-ab6d-4e8f-962b-8682f6835bed" autoIncrement="false" autoIncrementSequenceName="ControleLampada_luminaria1_seq" defaultValue="" name="luminaria1" nullable="1" physicalName="luminaria1" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL16" populated="true" UUID="dd444431-1458-48dc-bf06-d5819a304aac" autoIncrement="false" autoIncrementSequenceName="ControleLampada_lampada2_seq" defaultValue="" name="lampada2" nullable="1" physicalName="lampada2" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL19" populated="true" UUID="dd444431-1458-48dc-bf06-d5819a304aac" autoIncrement="false" autoIncrementSequenceName="ControleLampada_luminaria2_seq" defaultValue="" name="luminaria2" nullable="1" physicalName="luminaria2" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL17" populated="true" UUID="3ab2f19a-6fe2-4d48-b766-5d43ac7ac44c" autoIncrement="false" autoIncrementSequenceName="ControleLampada_lampada3_seq" defaultValue="" name="lampada3" nullable="1" physicalName="lampada3" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL20" populated="true" UUID="6bcd46db-647d-433c-9b1c-29716343801b" autoIncrement="false" autoIncrementSequenceName="Lampada_poste_ativo_seq" defaultValue="true" name="poste_ativo" nullable="0" physicalName="poste_ativo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
      <remarks></remarks>
     </column>
-    <column id="COL18" populated="true" UUID="c9d2b90a-3bae-402b-911a-2ba0d5af1a13" autoIncrement="false" autoIncrementSequenceName="ControleLampada_lampada4_seq" defaultValue="" name="lampada4" nullable="1" physicalName="lampada4" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL21" populated="true" UUID="38258dd7-97ac-451d-9539-ab542ec8bb3a" autoIncrement="false" autoIncrementSequenceName="Poste_derivacao_numero_seq" defaultValue="" name="derivacao_numero" nullable="1" physicalName="derivacao_numero" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL19" populated="true" UUID="38258dd7-97ac-451d-9539-ab542ec8bb3a" autoIncrement="false" autoIncrementSequenceName="Poste_derivacao_numero_seq" defaultValue="" name="derivacao_numero" nullable="1" physicalName="derivacao_numero" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL22" populated="true" UUID="a4f6130f-d2d0-4dc1-8a6f-20f9578d8602" autoIncrement="false" autoIncrementSequenceName="Poste_poste_numero_seq" defaultValue="" name="poste_numero" nullable="0" physicalName="poste_numero" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL20" populated="true" UUID="a4f6130f-d2d0-4dc1-8a6f-20f9578d8602" autoIncrement="false" autoIncrementSequenceName="Poste_poste_numero_seq" defaultValue="" name="poste_numero" nullable="0" physicalName="poste_numero" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL23" populated="true" UUID="4053815f-c6fb-42fc-b012-4cc3c19624a9" autoIncrement="false" autoIncrementSequenceName="Lampada_lampada_id_seq" defaultValue="" name="luminaria_id" nullable="1" physicalName="luminaria_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL21" populated="true" UUID="4053815f-c6fb-42fc-b012-4cc3c19624a9" autoIncrement="false" autoIncrementSequenceName="Lampada_lampada_id_seq" defaultValue="" name="lampada_id" nullable="0" physicalName="lampada_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL24" populated="true" UUID="3831efe4-7a9f-46b6-839f-cbc792cb6aa4" autoIncrement="false" autoIncrementSequenceName="Poste_poste_id_seq" defaultValue="" name="Parent_poste_id" nullable="1" physicalName="Parent_poste_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL22" populated="true" UUID="3831efe4-7a9f-46b6-839f-cbc792cb6aa4" autoIncrement="false" autoIncrementSequenceName="Poste_poste_id_seq" defaultValue="" name="Parent_poste_id" nullable="1" physicalName="Parent_poste_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL23" populated="true" UUID="762ef3f8-ae2a-4314-ac1b-a7bdd7b9221e" autoIncrement="false" autoIncrementSequenceName="Data_data_id_seq" defaultValue="" name="data_id" nullable="0" physicalName="data_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL25" populated="true" UUID="762ef3f8-ae2a-4314-ac1b-a7bdd7b9221e" autoIncrement="false" autoIncrementSequenceName="Data_data_id_seq" defaultValue="" name="data_id" nullable="1" physicalName="data_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
-    <folder id="FOLTAB133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB163" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB162" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB134" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX24" populated="true" UUID="cd9ee253-28c8-4720-8e5a-c08e88b45678" clustered="false" name="Poste_pk" physicalName="poste_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC25" populated="true" UUID="7a7e86e0-e577-44e2-ab7d-aae011bc49ac" ascendingOrDescending="UNSPECIFIED" column-ref="COL14" name="poste_id" physicalName="poste_id" />
+    <folder id="FOLTAB164" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX26" populated="true" UUID="cd9ee253-28c8-4720-8e5a-c08e88b45678" clustered="false" name="Poste_pk" physicalName="poste_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC27" populated="true" UUID="7a7e86e0-e577-44e2-ab7d-aae011bc49ac" ascendingOrDescending="UNSPECIFIED" column-ref="COL17" name="poste_id" physicalName="poste_id" />
     </index>
    </folder>
   </table>
-  <table id="TAB26" populated="true" UUID="ffb79cd4-efb6-47ed-aa1a-f11d81439078" name="Petala" objectType="TABLE" physicalName="Petala" >
+  <table id="TAB28" populated="true" UUID="ffb79cd4-efb6-47ed-aa1a-f11d81439078" name="Petala" objectType="TABLE" physicalName="Petala" >
    <remarks></remarks>
-   <folder id="FOLTAB261" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL27" populated="true" UUID="c38ddfe7-2fa7-4b34-a9e8-c39c5e5adb18" autoIncrement="true" autoIncrementSequenceName="Petala_petala_id_seq" defaultValue="" name="petala_id" nullable="0" physicalName="petala_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+   <folder id="FOLTAB281" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL29" populated="true" UUID="c38ddfe7-2fa7-4b34-a9e8-c39c5e5adb18" autoIncrement="true" autoIncrementSequenceName="Petala_petala_id_seq" defaultValue="" name="petala_id" nullable="0" physicalName="petala_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL28" populated="true" UUID="9121da95-77cb-4c8b-9075-512dd948bfa5" autoIncrement="false" autoIncrementSequenceName="ControleLampada_lampada1_seq" defaultValue="" name="lampada1" nullable="1" physicalName="lampada1" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL30" populated="true" UUID="9121da95-77cb-4c8b-9075-512dd948bfa5" autoIncrement="false" autoIncrementSequenceName="ControleLampada_luminaria1_seq" defaultValue="" name="luminaria1" nullable="1" physicalName="luminaria1" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL29" populated="true" UUID="1a831dd9-ab4d-41ec-bc13-851833045b2c" autoIncrement="false" autoIncrementSequenceName="ControleLampada_lampada2_seq" defaultValue="" name="lampada2" nullable="1" physicalName="lampada2" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL31" populated="true" UUID="1a831dd9-ab4d-41ec-bc13-851833045b2c" autoIncrement="false" autoIncrementSequenceName="ControleLampada_luminaria2_seq" defaultValue="" name="luminaria2" nullable="1" physicalName="luminaria2" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL30" populated="true" UUID="ec25423d-589a-4380-ad8b-ca57e5dce138" autoIncrement="false" autoIncrementSequenceName="ControleLampada_lampada3_seq" defaultValue="" name="lampada3" nullable="1" physicalName="lampada3" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL32" populated="true" UUID="0eb12bcd-f345-438e-8312-569af3468cfb" autoIncrement="false" autoIncrementSequenceName="Lampada_petala_ativa_seq" defaultValue="true" name="petala_ativa" nullable="0" physicalName="petala_ativa" precision="0" referenceCount="1" scale="0" source-column-ref="COL7" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
      <remarks></remarks>
     </column>
-    <column id="COL31" populated="true" UUID="9080e899-8b4d-47ad-bf97-faca42c88a62" autoIncrement="false" autoIncrementSequenceName="ControleLampada_lampada4_seq" defaultValue="" name="lampada4" nullable="1" physicalName="lampada4" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL33" populated="true" UUID="ec25423d-589a-4380-ad8b-ca57e5dce138" autoIncrement="false" autoIncrementSequenceName="ControleLampada_luminaria3_seq" defaultValue="" name="luminaria3" nullable="1" physicalName="luminaria3" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL32" populated="true" UUID="f6fc1fff-b7b1-407f-a2a3-5871c065d9c1" autoIncrement="false" autoIncrementSequenceName="Petala_petala_nome_seq" defaultValue="" name="petala_nome" nullable="0" physicalName="petala_nome" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL34" populated="true" UUID="9080e899-8b4d-47ad-bf97-faca42c88a62" autoIncrement="false" autoIncrementSequenceName="ControleLampada_luminaria4_seq" defaultValue="" name="luminaria4" nullable="1" physicalName="luminaria4" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL33" populated="true" UUID="9171c465-40c8-47e2-a3ab-95dfbe8f501e" autoIncrement="false" autoIncrementSequenceName="Petala_petala_numero_seq" defaultValue="" name="petala_numero" nullable="0" physicalName="petala_numero" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL35" populated="true" UUID="f6fc1fff-b7b1-407f-a2a3-5871c065d9c1" autoIncrement="false" autoIncrementSequenceName="Petala_petala_nome_seq" defaultValue="" name="petala_nome" nullable="0" physicalName="petala_nome" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL34" populated="true" UUID="eb1c8c30-861a-4f3f-a280-f06fcbddcb04" autoIncrement="false" autoIncrementSequenceName="Lampada_lampada_id_seq" defaultValue="" name="lampada_id" nullable="0" physicalName="lampada_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
+    <column id="COL36" populated="true" UUID="9171c465-40c8-47e2-a3ab-95dfbe8f501e" autoIncrement="false" autoIncrementSequenceName="Petala_petala_numero_seq" defaultValue="" name="petala_numero" nullable="0" physicalName="petala_numero" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL35" populated="true" UUID="6b573b3f-193c-45f9-a93e-6e67629fb0b8" autoIncrement="false" autoIncrementSequenceName="Data_data_id_seq" defaultValue="" name="data_id" nullable="0" physicalName="data_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL37" populated="true" UUID="eb1c8c30-861a-4f3f-a280-f06fcbddcb04" autoIncrement="false" autoIncrementSequenceName="Lampada_lampada_id_seq" defaultValue="" name="luminaria_id" nullable="0" physicalName="luminaria_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="5" userDefinedTypeUUID="69fb547f-e14c-4748-9746-4c0e9e94eb52" >
      <remarks></remarks>
     </column>
-    <column id="COL36" populated="true" UUID="6f11ca45-a0e6-4f59-a54c-2393d4148ca9" autoIncrement="false" autoIncrementSequenceName="Petala_petala_id_seq" defaultValue="" name="Parent_petala_id" nullable="0" physicalName="Parent_petala_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL38" populated="true" UUID="6b573b3f-193c-45f9-a93e-6e67629fb0b8" autoIncrement="false" autoIncrementSequenceName="Data_data_id_seq" defaultValue="" name="data_id" nullable="0" physicalName="data_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL39" populated="true" UUID="6f11ca45-a0e6-4f59-a54c-2393d4148ca9" autoIncrement="false" autoIncrementSequenceName="Petala_petala_id_seq" defaultValue="" name="Parent_petala_id" nullable="0" physicalName="Parent_petala_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
-    <folder id="FOLTAB263" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB283" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB262" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB282" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB264" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX37" populated="true" UUID="92b3bb44-442e-49c9-bd43-f892546ba68d" clustered="false" name="Petala_pk" physicalName="petala_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC38" populated="true" UUID="c26a8bbb-f652-4795-b0f0-df4cc60cb5a9" ascendingOrDescending="UNSPECIFIED" column-ref="COL27" name="petala_id" physicalName="petala_id" />
+    <folder id="FOLTAB284" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX40" populated="true" UUID="92b3bb44-442e-49c9-bd43-f892546ba68d" clustered="false" name="Petala_pk" physicalName="petala_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC41" populated="true" UUID="c26a8bbb-f652-4795-b0f0-df4cc60cb5a9" ascendingOrDescending="UNSPECIFIED" column-ref="COL29" name="petala_id" physicalName="petala_id" />
     </index>
    </folder>
   </table>
-  <table id="TAB39" populated="true" UUID="e1b3580c-ed99-444f-9bab-dc63068d4d7a" name="Data" objectType="TABLE" physicalName="Data" >
+  <table id="TAB42" populated="true" UUID="e1b3580c-ed99-444f-9bab-dc63068d4d7a" name="Data" objectType="TABLE" physicalName="Data" >
    <remarks></remarks>
-   <folder id="FOLTAB391" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL40" populated="true" UUID="82b81e6e-0a80-4d85-a836-ca6221809088" autoIncrement="true" autoIncrementSequenceName="Data_data_id_seq" defaultValue="" name="data_id" nullable="0" physicalName="data_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+   <folder id="FOLTAB421" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL43" populated="true" UUID="82b81e6e-0a80-4d85-a836-ca6221809088" autoIncrement="true" autoIncrementSequenceName="Data_data_id_seq" defaultValue="" name="data_id" nullable="0" physicalName="data_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL41" populated="true" UUID="5b843448-c0a7-4dc7-9371-88b9d82f29bd" autoIncrement="false" autoIncrementSequenceName="ControleLampada_data_1_seq" defaultValue="" name="data_1" nullable="1" physicalName="data_1" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL44" populated="true" UUID="5b843448-c0a7-4dc7-9371-88b9d82f29bd" autoIncrement="false" autoIncrementSequenceName="ControleLampada_data_1_seq" defaultValue="" name="data_1" nullable="1" physicalName="data_1" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL42" populated="true" UUID="c6ea33a5-eba4-4a17-b8cd-a1f9280a3cbd" autoIncrement="false" autoIncrementSequenceName="ControleLampada_data_2_seq" defaultValue="" name="data_2" nullable="1" physicalName="data_2" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL45" populated="true" UUID="c6ea33a5-eba4-4a17-b8cd-a1f9280a3cbd" autoIncrement="false" autoIncrementSequenceName="ControleLampada_data_2_seq" defaultValue="" name="data_2" nullable="1" physicalName="data_2" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL43" populated="true" UUID="5be1aae6-bf39-4ec2-895a-9425588cb6d1" autoIncrement="false" autoIncrementSequenceName="ControleLampada_data_3_seq" defaultValue="" name="data_3" nullable="1" physicalName="data_3" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL46" populated="true" UUID="5be1aae6-bf39-4ec2-895a-9425588cb6d1" autoIncrement="false" autoIncrementSequenceName="ControleLampada_data_3_seq" defaultValue="" name="data_3" nullable="1" physicalName="data_3" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL44" populated="true" UUID="7150b334-4567-4e73-ae52-3f26d0c9e102" autoIncrement="false" autoIncrementSequenceName="ControleLampada_data_4_seq" defaultValue="" name="data_4" nullable="1" physicalName="data_4" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL47" populated="true" UUID="7150b334-4567-4e73-ae52-3f26d0c9e102" autoIncrement="false" autoIncrementSequenceName="ControleLampada_data_4_seq" defaultValue="" name="data_4" nullable="1" physicalName="data_4" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL45" populated="true" UUID="af066cbd-4f24-4310-921c-586e85dfd609" autoIncrement="false" autoIncrementSequenceName="Data_data_queimada1_seq" defaultValue="" name="data_queimada1" nullable="1" physicalName="data_queimada1" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL48" populated="true" UUID="af066cbd-4f24-4310-921c-586e85dfd609" autoIncrement="false" autoIncrementSequenceName="Data_data_queimada1_seq" defaultValue="" name="data_queimada1" nullable="1" physicalName="data_queimada1" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL46" populated="true" UUID="2f16322f-2fad-4fde-b6cd-872379936b74" autoIncrement="false" autoIncrementSequenceName="Data_data_queimada2_seq" defaultValue="" name="data_queimada2" nullable="1" physicalName="data_queimada2" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL49" populated="true" UUID="2f16322f-2fad-4fde-b6cd-872379936b74" autoIncrement="false" autoIncrementSequenceName="Data_data_queimada2_seq" defaultValue="" name="data_queimada2" nullable="1" physicalName="data_queimada2" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL47" populated="true" UUID="cce70017-d2bf-4c60-820b-4b9167afd1d1" autoIncrement="false" autoIncrementSequenceName="Data_data_queimada3_seq" defaultValue="" name="data_queimada3" nullable="1" physicalName="data_queimada3" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL50" populated="true" UUID="cce70017-d2bf-4c60-820b-4b9167afd1d1" autoIncrement="false" autoIncrementSequenceName="Data_data_queimada3_seq" defaultValue="" name="data_queimada3" nullable="1" physicalName="data_queimada3" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL48" populated="true" UUID="456b0ee5-f918-4c9c-ad4a-c42f76272835" autoIncrement="false" autoIncrementSequenceName="Data_data_queimada4_seq" defaultValue="" name="data_queimada4" nullable="1" physicalName="data_queimada4" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL51" populated="true" UUID="456b0ee5-f918-4c9c-ad4a-c42f76272835" autoIncrement="false" autoIncrementSequenceName="Data_data_queimada4_seq" defaultValue="" name="data_queimada4" nullable="1" physicalName="data_queimada4" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
     </folder>
-    <folder id="FOLTAB393" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB423" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB392" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB422" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB394" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX49" populated="true" UUID="103eb966-b89f-47cb-9e2c-b814ea4894fc" clustered="false" name="Data_pk" physicalName="data_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC50" populated="true" UUID="6d6c0c2b-5466-4989-affa-db28d65b0d27" ascendingOrDescending="UNSPECIFIED" column-ref="COL40" name="data_id" physicalName="data_id" />
+    <folder id="FOLTAB424" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX52" populated="true" UUID="103eb966-b89f-47cb-9e2c-b814ea4894fc" clustered="false" name="Data_pk" physicalName="data_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC53" populated="true" UUID="6d6c0c2b-5466-4989-affa-db28d65b0d27" ascendingOrDescending="UNSPECIFIED" column-ref="COL43" name="data_id" physicalName="data_id" />
     </index>
    </folder>
   </table>
   <relationships>
-   <relationship id="REL51" populated="true" UUID="fc5dbd2e-b018-43d5-a5c0-7db7ae53a714" deferrability="7" deleteRule="3" fk-table-ref="TAB26" fkCardinality="7" identifying="false" name="Lampada_Petala_fk" physicalName="lampada_petala_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP52" populated="true" UUID="562df7fd-8b96-40d2-83c8-00398588fc5f" fk-column-ref="COL34" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL54" populated="true" UUID="fc5dbd2e-b018-43d5-a5c0-7db7ae53a714" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="false" name="Lampada_Petala_fk" physicalName="lampada_petala_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP55" populated="true" UUID="562df7fd-8b96-40d2-83c8-00398588fc5f" fk-column-ref="COL37" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL53" populated="true" UUID="3c42b4f4-9c02-4bb7-891a-3d61ad39d549" deferrability="7" deleteRule="3" fk-table-ref="TAB13" fkCardinality="7" identifying="false" name="Lampada_Poste_fk" physicalName="lampada_poste_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP54" populated="true" UUID="24529134-1010-477e-99b2-1bdc27e9cfe9" fk-column-ref="COL21" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL56" populated="true" UUID="3c42b4f4-9c02-4bb7-891a-3d61ad39d549" deferrability="7" deleteRule="3" fk-table-ref="TAB16" fkCardinality="7" identifying="false" name="Lampada_Poste_fk" physicalName="lampada_poste_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP57" populated="true" UUID="24529134-1010-477e-99b2-1bdc27e9cfe9" fk-column-ref="COL23" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL55" populated="true" UUID="6c11ded0-510c-4d96-894c-c91058c0a121" deferrability="7" deleteRule="3" fk-table-ref="TAB7" fkCardinality="7" identifying="false" name="Poste_ControleLampada_fk" physicalName="poste_controlelampada_fk" pk-table-ref="TAB13" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP56" populated="true" UUID="16775691-e414-4780-aa80-ea07ca34cc68" fk-column-ref="COL10" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL14" />
+   <relationship id="REL58" populated="true" UUID="6c11ded0-510c-4d96-894c-c91058c0a121" deferrability="7" deleteRule="3" fk-table-ref="TAB10" fkCardinality="7" identifying="false" name="Poste_ControleLampada_fk" physicalName="poste_controlelampada_fk" pk-table-ref="TAB16" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP59" populated="true" UUID="16775691-e414-4780-aa80-ea07ca34cc68" fk-column-ref="COL13" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL17" />
    </relationship>
-   <relationship id="REL57" populated="true" UUID="5bffc178-97db-46ba-917c-d8f42026376e" deferrability="7" deleteRule="3" fk-table-ref="TAB13" fkCardinality="7" identifying="false" name="Poste_Poste_fk" physicalName="poste_poste_fk" pk-table-ref="TAB13" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP58" populated="true" UUID="60863048-26a5-4df3-9184-d9b67580f57e" fk-column-ref="COL22" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL14" />
+   <relationship id="REL60" populated="true" UUID="5bffc178-97db-46ba-917c-d8f42026376e" deferrability="7" deleteRule="3" fk-table-ref="TAB16" fkCardinality="7" identifying="false" name="Poste_Poste_fk" physicalName="poste_poste_fk" pk-table-ref="TAB16" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP61" populated="true" UUID="60863048-26a5-4df3-9184-d9b67580f57e" fk-column-ref="COL24" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL17" />
    </relationship>
-   <relationship id="REL59" populated="true" UUID="88c87c6a-6f05-4254-b894-1e6281b0ee6d" deferrability="7" deleteRule="3" fk-table-ref="TAB7" fkCardinality="7" identifying="false" name="Petala_ControleLampada_fk" physicalName="petala_controlelampada_fk" pk-table-ref="TAB26" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP60" populated="true" UUID="88abc75f-8bdb-4da7-bfb9-1be10917e76f" fk-column-ref="COL9" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+   <relationship id="REL62" populated="true" UUID="88c87c6a-6f05-4254-b894-1e6281b0ee6d" deferrability="7" deleteRule="3" fk-table-ref="TAB10" fkCardinality="7" identifying="false" name="Petala_ControleLampada_fk" physicalName="petala_controlelampada_fk" pk-table-ref="TAB28" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP63" populated="true" UUID="88abc75f-8bdb-4da7-bfb9-1be10917e76f" fk-column-ref="COL12" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL29" />
    </relationship>
-   <relationship id="REL61" populated="true" UUID="7b969bc8-9159-44a0-8aae-81d20d8bb6b1" deferrability="7" deleteRule="3" fk-table-ref="TAB26" fkCardinality="7" identifying="false" name="Petala_Petala_fk" physicalName="petala_petala_fk" pk-table-ref="TAB26" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP62" populated="true" UUID="2a21af5d-8c50-4db7-8c6a-c9d031b2cbb2" fk-column-ref="COL36" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+   <relationship id="REL64" populated="true" UUID="7b969bc8-9159-44a0-8aae-81d20d8bb6b1" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="false" name="Petala_Petala_fk" physicalName="petala_petala_fk" pk-table-ref="TAB28" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP65" populated="true" UUID="2a21af5d-8c50-4db7-8c6a-c9d031b2cbb2" fk-column-ref="COL39" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL29" />
    </relationship>
-   <relationship id="REL63" populated="true" UUID="9fd2d122-5d36-4d43-9547-fe48ab261d0f" deferrability="7" deleteRule="3" fk-table-ref="TAB13" fkCardinality="7" identifying="false" name="Data_Poste_fk" physicalName="data_poste_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP64" populated="true" UUID="7889f798-b5cb-4df1-b926-bf17816f8c82" fk-column-ref="COL23" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
+   <relationship id="REL66" populated="true" UUID="9fd2d122-5d36-4d43-9547-fe48ab261d0f" deferrability="7" deleteRule="3" fk-table-ref="TAB16" fkCardinality="7" identifying="false" name="Data_Poste_fk" physicalName="data_poste_fk" pk-table-ref="TAB42" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP67" populated="true" UUID="7889f798-b5cb-4df1-b926-bf17816f8c82" fk-column-ref="COL25" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL43" />
    </relationship>
-   <relationship id="REL65" populated="true" UUID="695a1fe4-e539-42c9-aff0-aab11ee38cb5" deferrability="7" deleteRule="3" fk-table-ref="TAB26" fkCardinality="7" identifying="false" name="Data_Petala_fk" physicalName="data_petala_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP66" populated="true" UUID="0e476e2c-ae1d-4ce9-b324-fbf207ca29a9" fk-column-ref="COL35" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
+   <relationship id="REL68" populated="true" UUID="695a1fe4-e539-42c9-aff0-aab11ee38cb5" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="false" name="Data_Petala_fk" physicalName="data_petala_fk" pk-table-ref="TAB42" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP69" populated="true" UUID="0e476e2c-ae1d-4ce9-b324-fbf207ca29a9" fk-column-ref="COL38" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL43" />
    </relationship>
   </relationships>
  </target-database>
  <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
-  <table-pane table-ref="TAB1" x="615" y="93" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB7" x="652" y="330" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB13" x="224" y="342" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB26" x="1043" y="340" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB39" x="646" y="548" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL59" pkConnection="0.4647887323943662" fkConnection="0.5263157894736842" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL55" pkConnection="0.4378698224852071" fkConnection="0.5211267605633803" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL51" pkConnection="0.7722772277227723" fkConnection="0.16831683168316833" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL53" pkConnection="0.28217821782178215" fkConnection="0.7475247524752475" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL57" pkConnection="0.5" fkConnection="0.16129032258064516" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
-  <table-link relationship-ref="REL63" pkConnection="0.25161290322580643" fkConnection="0.9112426035502958" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL65" pkConnection="0.22580645161290322" fkConnection="0.6804733727810651" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL61" pkConnection="1.0" fkConnection="0.9467455621301775" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+ <play-pen zoom="1.0" viewportX="108" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="617" y="94" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB10" x="652" y="330" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB16" x="224" y="342" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB28" x="1043" y="340" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB42" x="646" y="548" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL62" pkConnection="0.4647887323943662" fkConnection="0.5263157894736842" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL58" pkConnection="0.4378698224852071" fkConnection="0.5211267605633803" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL54" pkConnection="0.7722772277227723" fkConnection="0.16831683168316833" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL56" pkConnection="0.28217821782178215" fkConnection="0.7475247524752475" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL60" pkConnection="0.5" fkConnection="0.16129032258064516" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+  <table-link relationship-ref="REL66" pkConnection="0.25161290322580643" fkConnection="0.9112426035502958" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL68" pkConnection="0.22580645161290322" fkConnection="0.6804733727810651" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL64" pkConnection="1.0" fkConnection="0.9467455621301775" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">

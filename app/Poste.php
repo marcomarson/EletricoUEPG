@@ -15,8 +15,7 @@ class Poste extends Model
     * @var array
     */
    protected $fillable = [
-       'lampada1', 'lampada2', 'lampada3', 'lampada4', 'derivacao_numero', 'poste_numero',
-       'lampada_id', 'data_id', 'Parent_poste_id'
+       'luminaria1', 'luminaria2', 'luminaria3', 'luminaria4', 'luminaria5', 'luminaria_id', 'poste_ativo'
    ];
 
    /**
@@ -24,12 +23,17 @@ class Poste extends Model
     *
     * @var array
     */
-   public function data() {
-       return $this->belongsTo('\App\Data', 'data_id', 'data_id');
+   public function luminaria() {
+       return $this->belongsTo('\App\Luminaria', 'luminaria_id', 'luminaria_id');
+   }
+
+   public function rede() {
+       return $this->hasMany('\App\Rede');
    }
    public function petala() {
-       return $this->belongsTo('\App\Lampada', 'lampada_id', 'lampada_id');
+       return $this->hasMany('\App\Petala');
    }
-  }
+
+
 
 }
